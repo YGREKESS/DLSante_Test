@@ -59,7 +59,7 @@ router.post("/signin", (req, res) => {
             _id: result[0].iduser,
             email: email,
           },
-          process.env.TOKEN_SECRET
+          process.env.TOKEN_SECRET || "HSJDQLZA87SQDHJZEA6775HZEAHJBZE"
         );
         res.status(200).send({
           message: "Authentification réussie !",
@@ -186,7 +186,8 @@ router.put("/:iduser", isAuth, (req, res) => {
                       _id: iduser,
                       email: email,
                     },
-                    process.env.TOKEN_SECRET
+                    process.env.TOKEN_SECRET ||
+                      "HSJDQLZA87SQDHJZEA6775HZEAHJBZE"
                   );
                   return res.header("auth-token", token).status(200).send({
                     message: "Modifications enregistrées !",
