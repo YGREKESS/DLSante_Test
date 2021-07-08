@@ -1,0 +1,12 @@
+A faire pour demain :
+
+- Controler la saisie des inputs,
+- Terminer la requête PUT/car côté frontend
+
+
+
+
+
+
+
+
