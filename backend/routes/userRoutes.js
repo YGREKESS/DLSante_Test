@@ -125,7 +125,6 @@ router.post("/register", (req, res) => {
 });
 
 router.put("/:iduser", isAuth, (req, res) => {
-  console.log(req.body);
   const iduser = req.params.iduser;
   const email = req.body.email;
   const actualPassword = req.body.actualPassword;

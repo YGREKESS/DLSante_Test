@@ -9,7 +9,7 @@ export const isAuth = (req, res, next) => {
       process.env.TOKEN_SECRET || "HSJDQLZA87SQDHJZEA6775HZEAHJBZE",
       (err, decode) => {
         if (err) {
-          res.status(401).send({ message: "Invalid Token" });
+          res.status(401).send({ message: "Vous n'êtes pas authentifié." });
         } else {
           req.user = decode;
           next();
@@ -17,6 +17,6 @@ export const isAuth = (req, res, next) => {
       }
     );
   } else {
-    res.status(401).send({ message: "Utilisateur non authentifié." });
+    res.status(401).send({ message: "Vous n'êtes pas authentifié." });
   }
 };

@@ -43,7 +43,7 @@ export default {
           });
           this.cars = data;
         } catch (error) {
-          console.log(error.response.data.message);
+          this.$toastr.e("Veuillez réessayer", error.response.data.message);
         }
       }
     },
